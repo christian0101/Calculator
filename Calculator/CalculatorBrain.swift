@@ -28,9 +28,9 @@ class CalculatorBrain {
 		"÷" : Operation.BinaryOperation({ $0 / $1 }),
 		"＋" : Operation.BinaryOperation({ $0 + $1 }),
 		"−" : Operation.BinaryOperation({ $0 - $1 }),
-        "mod" : Operation.BinaryOperation({ $0 % $1 }),
+        "mod" : Operation.BinaryOperation({ $0.truncatingRemainder(dividingBy: $1) }),
 		"=" : Operation.Equals,
-		"C" : Operation.Clear¡¡
+        "C" : Operation.Clear
 	]
 	
 	enum Operation {
